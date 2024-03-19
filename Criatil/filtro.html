@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criatil</title>
+    <link rel="stylesheet" href="CSS/filtro.css">
+    <link rel="stylesheet" href="CSS/principal.css">
+    <link rel="stylesheet" href="CSS/heade&footer.css">
+    <script src="JS/filtro.js"></script>
+    <script src="JS/principal.js"></script>
+    <link rel="icon" type="image/x-icon" href="Imagens/Header/Logo_1-removebg-preview_waifu2x_art_noise1_scale (1).png">
+</head>
+
+<body>
+    <header>
+        <img src="Imagens/Header/menu-hamburguer.png" alt="Menu Sanduiche" class="sanduiche" onclick="block()"> <!--Icone de menu sanduiche-->
+
+        <div class="menu_sanduiche" id="menu_sanduiche"> <!--Conteudo do menu sanduiche-->
+            <img src="Imagens/Header/cruz.png" alt="Sair" onclick="block()" class="Cruz">
+            <ul class="sanduiche pequeno" style="margin-bottom: 3rem;">
+                
+                <div class="opcao_sanduiche">
+                    <a href="cadastro.html" class="sanduiche">
+                        <img src="Imagens/Header/perfil_branco.png" alt="Cadastro" class="representacao">
+                        <li class="sanduiche">Cadastre-se</li>   
+                    </a>
+                </div>
+            
+            <hr>
+            <div class="opcao_sanduiche">
+                <a href="login.html" class="sanduiche">
+                <img src="Imagens/Header/login_branco.png" alt="Login" class="representacao">
+                <li class="sanduiche">Entrar</li>
+            </a>
+            </div>
+            <hr>
+            <div class="opcao_sanduiche">
+                <a href="carrinho.html" class="sanduiche">
+                <img src="Imagens/Header/carrinho.png" alt="Carrinho" class="representacao">
+                <li class="sanduiche">Carrinho</li>
+                </a>
+            </div>
+            </ul>
+            <ul class="sanduiche">
+                <div class="opcao_sanduiche">
+                    <a href="filtro.html" class="sanduiche">
+                    <img src="Imagens/Header/teddy-bear.png" alt="Urso de Pelucia" class="representacao">
+                    <li class="sanduiche">Explorar catalogo</li>
+                </a>   
+                </div>
+            <hr>
+            <div class="opcao_sanduiche">
+                <a href="contato.html" class="sanduiche">
+                <img src="Imagens/Header/chamada-telefonica.png" alt="Telefone tocando" class="representacao">
+                <li class="sanduiche">Contatos</li>
+            </a>
+            </div>
+            <hr>
+            <div class="opcao_sanduiche">
+                <a href="contato.html" class="sanduiche">
+                <img src="Imagens/Header/comentarios-pergunta.png" alt="Duvida" class="representacao">
+                <li class="sanduiche">Sac</li>
+                </a>
+            </div>
+            <hr>
+            <div class="opcao_sanduiche">
+                <a href="https://www.instagram.com/toys_criatil/" class="sanduiche">
+                <img src="Imagens/Footer/instagram.png" alt="Instagram" class="representacao">
+                <li class="sanduiche">Instagram</li>
+            </a>
+            </div>
+            </ul>
+            <div class="Criatil">
+                <div style="display: flex;align-items: center;">
+                <img src="Imagens/Header/Logo_1-removebg-preview_waifu2x_art_noise1_scale (1).png" alt="Logo Criatil" class="Criatil">
+                <h4 class="Criatil">Criatil 2024</h4>
+                </div>
+            </div>
+        </div>
+
+        <!--Logo Criatil-->
+        <a href="index.html">
+        <img src="Imagens/Header/Logo_1-removebg-preview_waifu2x_art_noise1_scale (1).png" alt="Logo Criatil" class="Logo">
+        </a>
+
+        <!--Anchors que levam para outras páginas-->
+        <ul class="header">
+            <li class="header"><a href="filtro.html" class="header">Explorar catalogo</a></li>
+            <li class="header"><a href="contato.html" class="header">Contatos</a></li>
+            <li class="header"><a href="index.html" class="header">Sac</a></li>
+            <li class="header"><a href="https://www.instagram.com/toys_criatil/" class="header">Instagram</a></li>
+        </ul>
+        
+        <input type="text" placeholder="Encontre seu brinquedo" class="pesquisa"> <!--Pesquisar-->
+
+            
+            <div class="Perfil" onmouseover="menuAparece('menu')" onmouseleave="menuDesaparece('menu'), menuDesaparece('dados_login'),menuAparece('login'), menuAparece('cadastro'), menuDesaparece('dados_cadastro')"><!--Div que contem as opções de login e cadastro-->
+                
+                <img src="Imagens/Header/Perfil.png" alt="Perfil" class="Perfil" id="Perfil">
+                
+                <div class="menu" id="menu">
+                <!--login-->
+                <div class="login" id="login">
+        
+            <button class="in_out" onclick="menuAparece('dados_login'), menuDesaparece('cadastro'), menuDesaparece('login')"><img src="Imagens/Header/Login.png" alt="Entrar" class="button" a href="login.html"><h4 class="button">Entrar</h4></button>
+            </div>
+            <!--Cadastro-->
+            <div class="cadastro" id="cadastro">
+            <button class="in_out_dois"  onclick="menuAparece('dados_cadastro'), menuDesaparece('cadastro'), menuDesaparece('login')"><img src="Imagens/Header/Cadastro.png" alt="Cadastrar" class="button" a href="cadastro.html"><h4 class="button">Cadastrar</h4></button>
+            </div>
+            <div class="dados_login" id="dados_login">
+                <h4 class="login">Email</h4>
+                <input type="text" placeholder="Insira seu Email" class="login">
+                <h4 class="login">Senha</h4>
+                <input type="text" placeholder="Insira sua senha" class="login">
+            </div>
+            <div class="dados_cadastro" id="dados_cadastro">
+                
+                <h4 class="cadastro">Nome</h4>
+                <input type="text" placeholder="Insira seu nome" class="cadastro">
+                
+                <h4 class="cadastro">Email</h4>
+                <input type="text" placeholder="Insira seu Email" class="cadastro">
+                
+                <h4 class="cadastro">Telefone</h4>
+                <input type="text" placeholder="Insira seu telefone" class="cadastro">
+                
+                <h4 class="cadastro">Senha</h4>
+                <input type="password" placeholder="Insira sua senha" class="cadastro">
+                
+                <h4 class="cadastro">Confirmar Senha</h4>
+                <input type="password" placeholder="Confirme sua senha" class="cadastro">
+            </div>
+                </div>
+            </div>
+            <a href="carrinho.html">
+            <img src="Imagens/Header/carrinho.png" alt="Carrinho" class="carrinho">
+            </a>
+
+            <div class="botao_stick">
+                <img src="Imagens/Header/menu-hamburguer.png" alt="Menu sanduiche" class="botao_stick" onclick="block()">
+            </div>
+    
+    </header>
+    <br>
+    <!-- PLUG-IN LIBRAS-->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <div class="caixa0">
+        <div class="caixa1">
+            <!--ÍNICIO FILTRO-->
+            <div class="caixafiltro">
+                <img src="Imagens/Centro/Filtros imagem.png" alt="Filtros" class="imglog">
+                <ul class="lista0">
+                    <li class="lista1">
+                        <p>Deficientes</p>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check1" />
+                        <label for="check1">
+                            Visual
+                        </label>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check2" />
+                        <label for="check2">
+                            Auditivo
+                        </label>
+                    </li>
+                    <li class="lista1">
+                        <p>Categoria</p>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check3" />
+                        <label for="check3">
+                            Jogo de tabuleiro
+                        </label>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check4" />
+                        <label for="check4">
+                            Jogos eletrônicos
+                        </label>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check5" />
+                        <label for="check5">
+                            Jogos de cartas
+                        </label>
+                    </li>
+                    <li class="lista1">
+                        <p>Fornecedora</p>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check6" />
+                        <label for="check6">
+                            Estrela
+                        </label>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check7" />
+                        <label for="check7">
+                            Copag
+                        </label>
+                    </li>
+                    <li class="lista2">
+                        <input type="checkbox" name="" id="check8" />
+                        <label for="check8">
+                            Sunny
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim filtros-->
+        </div>
+
+        <div class="caixa2">
+            <div class="itens">
+                <div class="linha1">
+                    <div class="item1">
+                        <!--Card-->
+          <div class="Card">
+            <!--Imagem-->
+            <div class="Imagem_container">
+                <div class="Imagem">
+                    <a href="produtos.html">
+                        <img src="Imagens/Centro/Ralsei.jpeg" alt="Pelúcia Ralse" class="Imagem_produto">
+                    </a>
+                    <div class="div_selo">
+                        <img src="Imagens/Centro/Selos/10.png" class="imagem_selodesc">
+                    </div>
+                </div>
+            </div>
+            <!--Texto do card-->
+            <h1 class="Nome_Produto">Pelúcia Ralsei</h1>
+            <p class="preco "><s>R$99,99</s></p>
+            <p class="preco">R$89,99</p>
+            <!--Botão "Comprar agora"-->
+            <div class="Comprar_Agora primeiro">
+                <button class="Comprar_Agora"><h2 class="Comprar_Agora">Comprar Agora</h2></button>
+            </div>
+        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                    <div class="item2">
+                        <!--Card-->
+         <div class="Card">
+            <!--Imagem-->
+            <div class="Imagem_container">
+                <div class="Imagem">
+                    <a href="produtos.html">
+                    <img src="Imagens/Centro/CuboMagicoTatil.png" alt="Cubo Mágico Tátil" class="Imagem_produto">
+                    </a>
+                    <div class="div_selo">
+                        <img src="Imagens/Centro/Selos/selo final olho.png" class="imagem_selo">
+                    </div>
+                </div>
+            </div>
+            <!--Texto do card-->
+            <h1 class="Nome_Produto">Cubo Mágico Tátil</h1>
+            <br>
+            <p class="preco">R$49,99</p>
+            <!--Botão "Comprar agora"-->
+            <div class="Comprar_Agora primeiro">
+                <button class="Comprar_Agora"><h2 class="Comprar_Agora">Comprar Agora</h2></button>
+            </div>
+        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                    <div class="item3"><!--CARD-->
+                        <div class="Card">
+                            <!--Imagem-->
+                            <div class="Imagem_container">
+                                <div class="Imagem">
+                                    <a href="#">
+                                        <img src="Imagens/Centro/Luffy.png" alt="Luffy Funko pop"
+                                            class="Imagem_produto">
+                                    </a>
+                                </div>
+                            </div>
+                            <!--Texto do card-->
+                            <h1 class="Nome_Produto">Luffy Funko Pop</h1>
+                            <p class="preco">R$149,99</p>
+                            <!--Botão "Comprar agora"-->
+                            <div class="Comprar_Agora primeiro">
+                                <button class="Comprar_Agora">
+                                    <h2 class="Comprar_Agora">Comprar Agora</h2>
+                                </button>
+                            </div>
+                        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                </div>
+                <div class="linha2">
+                    <div class="item4">
+                        <!--Card-->
+         <div class="Card">
+            <!--Imagem-->
+            <div class="Imagem_container">
+                <div class="Imagem">
+                    <a href="produtos.html">
+                    <img src="Imagens/Centro/UnoBraille.png" alt="Uno Braille" class="uno Braille Edition">
+                    </a>
+                    <div class="div_selo">
+                        <img src="Imagens/Centro/Selos/selo final olho.png" class="imagem_selo">
+                    </div>
+                    <div class="div_selo">
+                        <img src="Imagens/Centro/Selos/20.png" class="imagem_selodesc">
+                    </div>
+                </div>
+            </div>
+            <!--Texto do card-->
+            <h1 class="Nome_Produto">Uno Braille Edition</h1>
+            <p class="preco primeiro"><s>R$24,99</s></p>
+            <p class="preco">R$19,99</p>
+            <!--Botão "Comprar agora"-->
+            <div class="Comprar_Agora primeiro">
+                <button class="Comprar_Agora"><h2 class="Comprar_Agora">Comprar Agora</h2></button>
+            </div>
+        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                    <div class="item5">
+                        <!--Card-->
+         <div class="Card">
+            <!--Imagem-->
+            <div class="Imagem_container">
+                <div class="Imagem">
+                    <a href="produtos.html">
+                    <img src="Imagens/Centro/Bluey.png" alt="Bluey pelúcia" class="Imagem_produto">
+                    </a>
+                    <div class="div_selo">
+                        <img src="Imagens/Centro/Selos/20.png" class="imagem_selodesc">
+                    </div>
+                </div>
+            </div>
+            <!--Texto do card-->
+            <h1 class="Nome_Produto">Pelúcia Bluey</h1>
+            <p class="preco primeiro"><s>R$99,99</s></p>
+            <p class="preco">R$79,99</p>
+            <!--Botão "Comprar agora"-->
+            <div class="Comprar_Agora primeiro">
+                <button class="Comprar_Agora"><h2 class="Comprar_Agora">Comprar Agora</h2></button>
+            </div>
+        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                    <div class="item6"><!--CARD-->
+                        <div class="Card">
+                            <!--Imagem-->
+                            <div class="Imagem_container">
+                                <div class="Imagem">
+                                    <a href="#">
+                                        <img src="Imagens/Centro/Amongus.png" alt="Boneco Among us"
+                                            class="Imagem_produto">
+                                    </a>
+                                </div>
+                            </div>
+                            <!--Texto do card-->
+                            <h1 class="Nome_Produto">Boneco Among us</h1>
+                            <p class="preco">R$59,99</p>
+                            <!--Botão "Comprar agora"-->
+                            <div class="Comprar_Agora primeiro">
+                                <button class="Comprar_Agora">
+                                    <h2 class="Comprar_Agora">Comprar Agora</h2>
+                                </button>
+                            </div>
+                        </div>
+                        <!--FIM DO CARD-->
+                    </div>
+                </div>
+            </div>
+            <div class="vermais">
+                <button class="btnvermais" onclick="adicionarItens()">VER MAIS</button>
+            </div>
+        </div>
+    </div>
+    <!--JAVA LIBRAS-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <br>
+    
+    <footer>
+        <div class="Redes_Sociais"><!--Inclui titulo e logo das redes sociais-->
+            <div> 
+            <div class="Texto"><!--Titulo-->
+                <h3 class="footer">Redes Sociais</h3>
+            </div>
+            <div class="Logos"><!--Logos das redes sociais-->
+                <a href="https://www.instagram.com/toys_criatil/">
+                    <img src="Imagens/Footer/instagram.png" alt="Instagram" class="Rede_Social">
+                </a>
+                <img src="Imagens/Footer/twitter.png" alt="Twitter" class="Rede_Social">
+                <img src="Imagens/Footer/tik-tok.png" alt="TikTok" class="Rede_Social">
+            </div>
+            </div>
+        </div>
+    <!--Anchors do footer-->
+    
+            <ul class="footer">
+                <div class="anchors">
+                    <li class="primeiro footer" style="display: flex;align-self: center;"><a href="index.html"  class="footer"><h2 class="footer">Home</h2></a></li> 
+                <li class="penultimo"><a href="#"  class="footer"><h2 class="footer">Termos de uso</h2></a></li>
+                </div>
+                <div class="anchors">
+                <li class="footer"><a href="#" class="footer"><h2 class="footer">Trabalhe conosco</h2></a></li>
+                <li class="footer"><a href="contato.html" class="footer"><h2 class="footer">SAC</h2></a></li>
+                <li class="ultimo"><a href="sobre nós.html" class="footer"><h2 class="footer">Sobre nós</h2></a></li> 
+                </div>
+            </ul>
+   
+    </footer>
+</body>
+
+</html>

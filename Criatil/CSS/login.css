@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+
+*{/*Zerar valores e aplicar fonte padrão (Tauri)*/
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: none;
+font-family: "Tauri";
+}
+
+
+
+  /* css do cadastro */
+  body {
+    font-family: "Tauri", sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-container {
+    display:block;
+    align-items: center;
+    background-color: #0476D9;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 3px solid black;
+}
+.cadastro-container input {
+    margin-bottom: 10px;
+    width: 90%;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border: 2px solid black;
+    box-sizing: border-box;
+    text-indent: 5px;
+    letter-spacing: 0;
+}
+.cadastro-container h3 {
+    font-size: 2rem;
+    font-weight:bold;
+    margin: 46px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.cadastro-container .Logo {
+    width: 180px;
+    height: 130px;
+    float: left;
+    margin-right: 20px; /* espaço de margem à direita */
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.cadastro-container button {
+        background-color: #FFD056;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+        border: 2px solid black;
+}
+.cadastro-container form {
+    margin-right: 10%;
+}
+div.opcoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+div.opcoes input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+}
+.corpo{
+  margin-bottom: 10rem;
+}
+.Esqueceu{
+  text-decoration: none;
+  color: white;
+}
+.Esqueceu:hover{
+  text-decoration: underline;
+}
+.Lembrar{
+  color: white;
+}
+div.corpo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 9.5rem;
+  margin-top: 11rem;
+}
+main{
+  align-self: center;
+}
+input[type=radio], input[type=checkbox] {
+  border: 0px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+input{
+  height: 2.5rem;
+  width: 28rem;
+  align-self: center;
+  border-radius: 50px;
+  border: none;
+  margin-left: 2rem;
+}
+input::placeholder {/*Customizar place holder do input*/
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0.5;
+  color: black;
+  padding-left: 1rem;
+}
+@media(max-width: 485px) {
+    .cadastro-container h3 {
+        font-size: 1.7rem;
+        margin-left: 0;
+    }
+    .cadastro-container .Logo {
+        width: 170px;
+        height: 120px;
+        margin-right: 0px;
+    }
+}
+@media(max-width: 420px) {
+    .cadastro-container h3 {
+        font-size: 1.5rem;
+    }
+}
+@media(max-width: 390px) {
+    .cadastro-container h3 {
+        font-size: 1.2rem;
+    }
+    .cadastro-container .Logo {
+        width: 160px;
+        height: 120px;
+        margin-right: 10px;
+        margin: 0;
+    }
+    .cadastro-container input {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+    .cadastro-container {
+        margin: 10px;
+    }
+    div.corpo{
+      display: flex;
+      justify-content: center;
+    }
+}
+@media(max-width: 330px) {
+    .cadastro-container h3 {
+        font-size: 1.3rem;
+    }
+    .cadastro-container .Logo {
+        width: 140px;
+        height: 100px;
+        
+    }
+}

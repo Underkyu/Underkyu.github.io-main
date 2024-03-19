@@ -1,0 +1,530 @@
+/*Inicio header*/
+header{ 
+    background-color: #0476D9;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+  }
+  img.Logo{
+    width: 9.87rem;
+    height: fit-content;
+  }
+  
+  ul.header{
+    display: flex;
+    align-items: center;
+  }
+  
+  li.header{
+    list-style-type: none;
+    margin-left: 1rem;
+  }
+  a.header{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    width: min-content;
+    transform-origin: center;
+    cursor: pointer;
+
+  }
+  a.header::after{
+    content: '';
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+    transform-origin: center;
+}   
+a.header:hover::after{ /*Faz uma linha aparecer quando o mouse ta em cima*/
+    transform: scaleX(1);
+}
+
+
+div.menu_sanduiche{ 
+  display: flex;
+  background-color: #0476D9;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  z-index: 3;
+  width: 0rem;
+  justify-items: flex-end;
+  overflow: hidden;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+}
+
+div.open {
+  display: block;
+  width: 20rem;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+}
+  
+
+input.pesquisa{
+  width: 100vh;
+  margin-right: 3rem;
+  height: 2.5rem;
+  width: 28rem;
+  align-self: center;
+  border-radius: 50px;
+  border: none;
+  margin-left: 2rem;
+}
+
+input.login, input.cadastro{
+  width: 100vh;
+  height: 2.5rem;
+  width: 28rem;
+  align-self: center;
+  border-radius: 50px;
+  border: none;
+}
+
+  input::placeholder {/*Customizar place holder do input*/
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.5;
+    color: black;
+    padding-left: 1rem;
+  }
+
+  img.sanduiche{/*Icon do menu sanduiche*/
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    transition: linear, 0.5s;
+  }
+  img.sanduiche:hover{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  div.Perfil{/*Icon perfil e menu cadastro e login*/
+    position: relative;
+    margin-left: 3rem;
+    width: fit-content;
+  }
+  img.Perfil{/*Imagem icon perfil*/
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    right: -30px;
+    bottom: -27px;
+  }
+  div.menu{/*div que mostra menu de login e cadastro*/
+    display: none;
+    background-color: #0476D9;
+    border: black solid 2px;
+    border-radius: 25px;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    right: -110px;
+    top: 25px;
+    z-index: 3;
+    &:hover{
+      display: block;
+    }
+  }
+  img.button{/* Imagem Botão Cadastro e Login*/
+    height: 40px;
+    align-self: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  button.in_out{ /*Botão Login*/
+    height: 3rem;
+    width: 100%;
+    align-self: center;
+    border-radius: 15px;
+    background-color: #FFD056;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition-duration: 1s;
+  }
+  button.in_out_dois{/*Botão Cadastro*/
+    height: 3rem;
+    width: 100%;
+    align-self: center;
+    border-radius: 15px;
+    background-color: #FFD056;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    transition-duration: 1s;
+  }
+  #login, #cadastro{
+    width: 100%;
+  }
+  button.in_out:hover,button.in_out_dois:hover{/*Hover dos botões login e cadastro*/
+    background-color: #f3be38;
+  }
+  div.login{/*Botão de login*/
+    width: fit-content;
+  }
+  div.dados_login, div.dados_cadastro { /*Formulario de login*/
+    display: none;
+    width: 120%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  input.login, input.cadastro{/*Input do formulario de login*/
+    width: 11rem;
+  }
+  h4.login, h4.cadastro{/*texto que fica em cima do formulario*/
+    justify-self: center;
+    margin-left: 1rem;
+  }
+  h4.button{/*Texto Botão Cadastro e Login*/
+    font-size: 1rem;
+    align-self: center;
+    margin-right: 1rem;
+  }
+  div.button{/*Botoões de Login, Cadastro e Carrinho*/
+    display: flex;
+    white-space: nowrap;
+    align-self: center;
+  }
+  img.carrinho{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 4rem;
+  }
+  #dados_login, #dados_cadastro{
+    display: none;
+  }
+  div.botao_stick{
+    background-color: #0476D9;
+    border-radius: 100%;
+    width: 3.65rem;
+    height: 3.5rem;
+    position: fixed;
+    bottom: 13px;
+    right: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  img.botao_stick{
+    width: 2rem;
+    height: 2rem;
+  }
+  div.opcao_sanduiche{
+    display: flex;
+    align-items: center;
+  }
+  img.representacao{
+    margin-right: 1rem;
+  }
+  div.Criatil{
+    display: flex;
+    width: 100%;
+    height: 65%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  h4.Criatil{
+    font-family: Tauri;
+    color: #FFFFFF;
+    
+  }
+  img.Criatil{
+    width: 10rem;
+    height: 7rem;
+  
+  }
+  ul.pequeno{
+    display: none;
+    justify-content: center;
+  }
+  a.sanduiche{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+  }
+  
+  
+  /*Vambora pra responsividade XD*/
+ /* 2xl */
+@media (max-width: 1536px) {
+  div.botao_stick{
+    display: none;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+    ul.header{
+      display: none;
+    }
+    img.sanduiche{/*Icon do menu sanduiche*/
+      display: block;
+    }
+    img.Logo{
+      margin-right: 3rem;
+    }
+    img.Cruz{
+      margin: 10px;
+      justify-self: flex-end;
+    }
+    ul.sanduiche{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    li.sanduiche{
+      list-style-type: none;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    hr{
+      width:100%;
+      border: 1px solid #FFFFFF;
+    }
+    img.filtro{
+      width: 7rem;
+    }
+    div.botao_stick{
+      display: none;
+    }
+    ul.pequeno{
+      display: none;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  input.pesquisa{
+    width: 30rem;
+    margin-right: 3rem;
+  }
+  div.botao_stick{
+    display: none;
+  }
+  ul.pequeno{
+    display: none;
+  }
+}
+
+@media (max-width: 975px) {
+  .Perfil, .carrinho{
+    display: none;
+  }
+  ul.pequeno{
+    display: none;
+  }
+  ul.pequeno{
+    display: flex;
+  }
+  div.Criatil{
+   height: 50%;
+
+  }
+}
+
+
+
+/* md */
+@media (max-width: 800px) {
+  div.botao_stick{
+    display: flex;
+  }
+  img.sanduiche, .Perfil, .carrinho{
+    display: none;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  div.botao_stick{
+    display: flex;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+  }
+
+  /* Algumas mudanças realtivas a altura do aparelho*/
+  @media (max-height: 1200px) {
+    div.botao_stick{
+      bottom: 200px;
+      right: 16px;
+    }
+
+  }
+  @media (max-height: 950px) {
+    div.botao_stick{
+      bottom: 25px;
+      right: 50px;
+    }
+  }
+
+  /*Inicio footer*/
+  footer {
+    background-color: #0476D9;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  img.Rede_Social {
+    width: 4rem;
+    margin-left: 4rem;
+  }
+  
+  div.Logos {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  img.Rede_Social {
+    width: 5rem;
+    height: fit-content;
+  }
+  
+  h3.footer,
+  h2.footer {
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  ul.footer {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  li.footer {
+    margin-right: 5rem;
+  }
+  
+  .ultimo {
+    margin-right: 5rem;
+  }
+  
+  .penultimo {
+    margin-right: 5rem;
+  }
+  
+  a.footer {
+    text-decoration: none;
+  }
+  
+  div.anchors {
+    display: flex;
+  }
+  
+  @media (min-width: 1000px) {}
+  
+  @media (max-width: 900px) and (min-width:701px) {
+    ul.footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    div.anchors {
+      justify-self: center;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 700px) and (min-width:500px) {}
+  
+  @media (min-width : 350px) and (max-width: 400px) {
+    ul.footer {
+      justify-content: center;
+    }
+  
+    h2.footer {
+      font-size: 1rem;
+    }
+  
+    li.footer {
+      width: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .ultimo {
+      margin-right: 0px;
+    }
+  
+    .penultimo {
+      margin-right: 0px;
+    }
+  
+    div.anchors {
+      justify-self: center;
+      margin-top: 0.5rem;
+    }
+  
+    img.Rede_Social {
+      width: 4rem;
+      margin-left: 4rem;
+    }
+  }
+  
+  @media (max-width: 450px) and (min-width:400px) {
+    ul.footer {
+      justify-content: center;
+    }
+  
+    h2.footer {
+      font-size: 1rem;
+    }
+  
+    li.footer {
+      width: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .ultimo {
+      margin-right: 0px;
+    }
+  
+    .penultimo {
+      margin-right: 0px;
+    }
+  
+    div.anchors {
+      justify-self: center;
+      margin-top: 0.5rem;
+    }
+  
+    img.Rede_Social {
+      width: 4rem;
+      margin-left: 4rem;
+    }
+  }
+  
+  /*Fim Fotter*/

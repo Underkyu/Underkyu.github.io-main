@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Tauri&display=swap');
+
+* {
+  /*Zerar valores e aplicar fonte padrão (Tauri)*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  font-family: "Tauri";
+}
+
+
+.caixa0 {
+  width: 100%;
+  height: fit-content;
+  min-height: 80vh;
+  padding: 10px;
+  display: flex;
+}
+
+.caixa1 {
+  width: 80%;
+  text-align: center;
+}
+
+.fab {
+  letter-spacing: 2px;
+  padding: 20px;
+  font-size: 30px;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-whatsapp {
+  background: #42EB61;
+  color: white;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+
+.fa-whatsapp:hover {
+  transform: translateY(-10px)
+}
+
+.caixa2 {
+  width: 20%;
+  display: flex;
+}
+
+.img-caixa2 {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+
+  .caixa2 {
+    display: none;
+    width: 0%;
+  }
+
+  .caixa1 {
+    width: 100%;
+  }
+}
+
+.form-sac {
+  text-align: center;
+}
+
+.form-sac input {
+  padding: 10px;
+  height: 3rem;
+  border: none;
+  background-color: #D6D6D6;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.form-sac input:focus {
+  background-color: white;
+  transform: scale(1.02);
+  box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+
+.form-sac textarea {
+  padding: 10px;
+  border: none;
+  background-color: #D6D6D6;
+  border-radius: 15px;
+  margin: 5px;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.form-sac textarea:focus {
+  background-color: white;
+  transform: scale(1.02);
+  box-shadow: 13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+
+.form-sac input::placeholder {
+  text-align: center;
+}
+
+.form-sac input[type="text"] {
+  width: 40%;
+}
+
+.form-sac input[type="email"],
+.form-sac textarea {
+  width: 80%;
+}
+
+.btn-submit {
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.5 ease 0s;
+  cursor: pointer;
+  outline: none;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+  margin: 5px;
+}
+
+.btn-submit:hover {
+  background-color:#FFD056;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.btn-submit:active {
+  transform: translatey(-1px);
+  transition: 100ms ease-in-out;
+}
